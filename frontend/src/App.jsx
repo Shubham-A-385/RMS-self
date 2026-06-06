@@ -1,18 +1,26 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+
 import Sidebar from "./components/Sidebar";
+
 import Home from "./pages/Home";
 import Dishes from "./pages/Dishes";
 import Dues from "./pages/Dues";
 import Expenses from "./pages/Expenses";
 import Analytics from "./pages/Analytics";
-import DashboardHeader from "./components/DashboardHeader";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 
 function App() {
+  const location = useLocation();
+
+  const hideSidebar =
+    location.pathname === "/login" ||
+    location.pathname === "/register";
+
   return (
     <div className="flex h-screen">
-      <Sidebar />
+      {!hideSidebar && <Sidebar />}
+
       <div className="flex-1 flex flex-col">
         <main className="flex-1 bg-slate-50 overflow-auto">
           <Routes>

@@ -12,26 +12,26 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="flex min-h-screen w-full bg-gray-100">
+    <div className="flex h-screen w-full bg-gray-100 overflow-hidden">
       {/* LEFT PANEL */}
 
-      <div className="hidden lg:flex flex-1 bg-gradient-to-br from-teal-900 to-teal-700 relative overflow-hidden text-white p-16 items-center">
+      <div className="hidden lg:flex flex-1 bg-gradient-to-br from-teal-900 to-teal-700 relative overflow-hidden text-white p-12 items-center">
         {/* Blur Effect */}
 
         <div className="absolute top-[-100px] right-[-100px] w-[400px] h-[400px] bg-orange-400/20 blur-[120px] rounded-full"></div>
 
-        <div className="relative z-10 max-w-xl">
+        <div className="relative z-10 max-w-xl ml-10">
           {/* Logo */}
 
           <div className="w-16 h-16 bg-white rounded-2xl mb-8"></div>
 
-          <h1 className="text-5xl font-bold leading-tight mb-6">
+          <h1 className="text-4xl font-bold leading-tight mb-6">
             Elevate Your Restaurant
             <br />
             Operations with Hotelix.
           </h1>
 
-          <p className="text-lg text-gray-200 leading-8 mb-10">
+          <p className="text-lg text-gray-200 leading-8 mb-6">
             Join thousands of high-performing restaurants that use our RMS to
             streamline workflows, manage inventory, and boost guest
             satisfaction.
@@ -77,7 +77,7 @@ const Register = () => {
 
       {/* RIGHT PANEL */}
 
-      <div className="flex-1 flex items-center justify-center p-6 md:p-12 bg-gray-50">
+      <div className="flex-1 flex items-center justify-center p-6 md:p-8 bg-gray-50 overflow-y-auto">
         <div className="w-full max-w-md">
           <h2 className="text-4xl font-bold text-gray-900 mb-2">
             Create your account
@@ -87,7 +87,7 @@ const Register = () => {
             Start your 14-day free trial. No credit card required.
           </p>
 
-          <form className="space-y-5">
+          <form className="space-y-4">
             {/* Restaurant */}
 
             <div>
@@ -170,25 +170,7 @@ const Register = () => {
               <p className="text-sm text-gray-500 mt-2">
                 Must be at least 8 characters long.
               </p>
-            </div>
-
-            {/* Checkbox */}
-
-            <div className="flex items-start gap-3">
-              <input type="checkbox" className="mt-1" />
-
-              <p className="text-sm text-gray-600">
-                I agree to the{" "}
-                <a href="/" className="text-teal-800 font-semibold">
-                  Terms and Conditions
-                </a>{" "}
-                and{" "}
-                <a href="/" className="text-teal-800 font-semibold">
-                  Privacy Policy
-                </a>
-                .
-              </p>
-            </div>
+            </div>        
 
             {/* Button */}
 
@@ -203,7 +185,7 @@ const Register = () => {
               <p className="text-gray-500">
                 Already have an account?
                 <a
-                  href="/"
+                  href="/login"
                   className="text-teal-900 font-bold ml-1 hover:underline"
                 >
                   Back to Login
@@ -212,7 +194,7 @@ const Register = () => {
             </div>
           </form>
 
-          <footer className="text-center text-sm text-gray-400 mt-10">
+          <footer className="text-center text-sm text-gray-400 mt-5">
             © 2026 Hotelix Technologies. All rights reserved.
           </footer>
         </div>
